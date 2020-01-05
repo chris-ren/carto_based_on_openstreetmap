@@ -13,17 +13,17 @@ Les tags suivants doivent être utilisés :<br/>
 			contact:facebook<br/>
 			contact:phone<br/>
 			contact:website<br/>
-			description:fr<br/>
+			description<br/>
 			image=http://mieuxtrieranantes.fr/docs/medias/AteliersReparationCollaboratifsLoireAtlantique/<br/>
 			brand=Repair Café<br/>
 			name<br/>
 			charity=yes<br/>
 			<b>repair=assisted_self_service</b><br/>
-			service:fabrik:repair<br/>
-			service:furniture:repair<br/>
+			service:boutiqueAssociative:repair<br/>
+			service:depotVente:repair<br/>
 			service:comp__uter:repair<br/>
 			service:cam__era:repair<br/>
-			service:bicycle:repair<br/>
+			service:boutiqueProfessionnelle:repair<br/>
 			service:small_electronics_device<br/>
 			opening_hours<br/>
 			source<br/>

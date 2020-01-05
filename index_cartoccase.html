@@ -3,26 +3,28 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 
-		<title>Ateliers de co_réparation</title>
+		<title>Achats d'occasion</title>
 		<meta name=”description”
-		content="Carte des ateliers de co-réparation." />
-		<meta name=”keywords” content="repai café" />
+		content="Carte des Achats d'occasion." />
+		<meta name=”keywords” content="nantes, vrac, emballages, zéro déchets, magasin vrac, magasin zéro déchet" />
 		<meta property="og:title" content="Réparation" />
-		<meta property="og:site_name" content="Ateliers de co-réparation" />
+		<meta property="og:site_name" content="Achats d'occasion" />
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="http://www.coreparation.fr" />
-		<meta property="og:image" content="logo-carte-all.png" />
-		<meta property="og:description" content="Carte des ateliers de co-réparation."  />
+		<meta property="og:url" content="http://www.cartoccase.fr" />
+		<meta property="og:image" content="logo-carte.png" />
+		<meta property="og:description" content="Carte des achats d'occasion."  />
 		<meta property="og:locale" content="fr_FR" />
 
 		<link rel="icon" type="image/png" href="logo.png" />
 
 		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="css/calendar.css">
 		<link rel="stylesheet" href="lib/leaflet-1.3.1/leaflet.css"/>
 		<link rel="stylesheet" href="lib/mastercluster/MarkerCluster.css" />
 		<link rel="stylesheet" href="lib/mastercluster/MarkerCluster.Default.css" />
 
-		<script src="lib/leaflet-1.3.1/leaflet.js"></script>
+		<!-- script src="lib/leaflet-1.3.1/leaflet.js"></script -->
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 		<script src="lib/mastercluster/leaflet.markercluster.js"></script>
 		<script src="lib/subgroup/subgroup.js"></script>
 		<script src="lib/shopmarker/marker_icons.js"></script>
@@ -36,7 +38,7 @@
 		  _paq.push(['trackPageView']);
 		  _paq.push(['enableLinkTracking']);
 		  (function() {
-			var u="//coreparation44.fr/analytics/piwik/";
+			var u="//cartoccase.fr/analytics/piwik/";
 			_paq.push(['setTrackerUrl', u+'piwik.php']);
 			_paq.push(['setSiteId', '1']);
 			var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
@@ -45,9 +47,18 @@
 		</script>
 		<!-- End Matomo Code -->
 
+		<script src="lib/jquery-3.3.1.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+	  function show_hide_div(nomdiv){
+	    var lediv = document.getElementById(nomdiv);
+	  if(lediv.style.display=="block")
+	    lediv.style.display="none";
+	  else
+	    lediv.style.display="block";
+	  }
+	</script>
 	</head>
 	<body>
-
 		<header>
 			<nav role="navigation">
 				<div id="menuToggle" class="box-shadow">
@@ -57,11 +68,10 @@
 					    <span></span>
 					</div>
 
-					<a href="#jumptomap"><h1 style='font-size:12px'>Ateliers de co-réparation</h1></a>
+					<img src="logo-header.png" class="logocartoccase"><a href="#jumptomap"><h1 style='font-size:12px'>Ateliers de co-réparation </br>de France.</h1></a>
 
 					<ul id="menu" class="menu">
-						<a href="#jumptomap" onclick="closeMenu()" title="Carte des repairs café"><li>Carte</li></a>
-						<a href="#calendrier" onclick="closeMenu()"><li>Calendrier</li></a>
+						<a href="#jumptomap" onclick="closeMenu()"><li>Carte</li></a>
 						<a href="#projet" onclick="closeMenu()"><li>Projet</li></a>
 						<a href="#vert" onclick="closeMenu()"><li>Site vert et libre</li></a>
 						<a href="#contribuer" onclick="closeMenu()"><li>Contribuer</li></a>
@@ -71,52 +81,40 @@
 			</nav>
 		</header>
 
-	<div id="header_embedded">
-      Ce contenu provient du site "http://www.coreparation44.fr" réalisé par l'association "Mieux trier à Nantes".<br/>
-	</div>
-
-		<a class="anchor" id="jumptomap"></a>
-		<div id="map" style="width: 100%;  height: 90%; z-index: 1;"></div>
+		<div id="header_embedded">
+	      Ce contenu provient du site "http://www.cartoccase.fr" réalisé par l'association "Mieux trier à Nantes".<br/>
+		</div>
 
 
-	<div id="content">
-
-		<a class="anchor" id="calendrier"></a>
-		<h2>Le calendrier</h2>
-		<p>Rencontre des 2 prochains mois</p>
-
-		<p>
-		<iframe style="width:100%;height:500px" frameborder="0" scrolling="yes" allowtransparency="allowtransparency" class="cibulFrame cbpgbdy" data-oabdy src="calendrier.html?department=all"></iframe>
-		</p>
+				<div id="content">
 
 		<a class="anchor" id="projet"></a>
 		<h2>Le projet</h2>
 		<p>
-			Il existe de nombreux ateliers de réparation collaboratifs. Il arrive parfois que des particuliers se rendent à un atelier de réparation distant, car il ne connaissait pas l'existence d'un lieu plus proche.<br/><br/>
-			Si vous connaissez des structures qui ne sont pas dans la liste des structures listées ci-dessous, dites-le nous.<br/><br/>
-			Merci.<br/><br/>
-			Christian Renoulin, Association Mieux trier à Nantes<br/><br/>
+			Il existe de nombreux ateliers de réparation collaboratifs. Il arrive parfois que des particuliers se rendent à un atelier de réparation distant, car il ne connaissait pas l'existence d'un lieu plus proche.<br/><br/>Les associations "Repair Café du Vignoble nantais" et "Mieux trier à Nantes" ont réalisés en 2017 pour Ecopole une liste des ateliers de réparation collaboratifs de Loire-Atlantique. Cette liste est open-data (réutilisable gratuitement et librement). Elle a été étendue ensuite pour la France entière.<br/><br/>
+			<b>Cette carte est la vôtre : vous pouvez la modifier par vous-même car les données sont stoquées sur OpenStreetMap</b> (le guide est <a href='https://mieuxtrieranantes.wordpress.com/2019/12/15/ajouter-modifier-ou-supprimer-un-atelier-sur-la-carte-cartoccase-fr/' target=_new>ici</a>).<br/><br/>
+			Merci.</p>
 		</p>
 		<a class="anchor" id="vert"></a>
 		<h2>Un site vert et libre</h2>
 		<p>
 			Ce site a plusieurs particularités :<br/>
 			- la carte n'est pas stockée chez Google mais chez OpenStreetMap qui est une carte libre et qui n'appartient pas à un géant d'internet.<br/>
-			- le calendrier n'est pas stocké chez Facebook mais dans l'agenda libre Open-Agenda.<br/>
-			- afin de diminuer la consommation électrique des requêtes, on ne récupère pas en temps réel les données de l'agenda et de la carte, mais uniquement 1 fois toutes les
-			24 heures et à la demande.<br/>
+			- afin de diminuer la consommation électrique des requêtes, on ne récupère pas en temps réel les données de la carte, mais uniquement 1 fois par jour et à la demande.<br/>
 			- les statistiques ne sont pas réalisées par "Google Analytics" mais la solution libre Matomo et hébergées sur ce site.<br/>
-			- le code source de ce site est libre, et <a href='https://github.com/vivreanantes/vracanantes/tree/feature/AteliersReparationCollaboratifLoireAtlantique' target=_ne>disponible sur github</a>.
+			- le code source de ce site est libre, et <a href='https://github.com/chris-ren/carto_based_on_openstreetmap' target=_ne>disponible sur github</a>.
 		</p>
 
 		<a class="anchor" id="contribuer"></a>
 		<h2>Contribuer</h2>
-		<p>Pour la carte, au choix : <br>
-			- remplir le <a href='https://docs.google.com/forms/d/e/1FAIpQLSd95D0AvY4B7biFf7tQz5TNDDg5_4wZXP4U3IOlxkS4McCrxw/viewform' target=_new>formulaire</a><br/>
-			- inscrire les données directement dans OpenStreetMap <a href='http://www.coreparation44.fr/RecetteAjoutAtelierCoReparationSurCarte.pdf' target=_new>en suivant la recette</a>
+		<p>Pour ajouter, modifier ou supprimer des points sur la carte, <b>au choix</b> : <br>
+			- <i>je ne suis pas très fort en informatique</i> : remplir le <a href='https://framaforms.org/ateliers-de-reparation-collaboratifs-1539567458' target=_new>formulaire</a><br/>
+			- <i>je suis moyen en informatique</i> : utiliser des formulaires pour saisir directement, via MapContrib. Le manuel est <a href='https://mieuxtrieranantes.wordpress.com/2019/12/16/avec-mapcontrib-ajouter-modifier-ou-supprimer-un-atelier-sur-la-carte-cartoccase-fr/' target=_new>ici</a> .<br/>
+			- <i>je suis bon en informatique</i> : inscrire directement dans OpenStreetMap :
+			 	le manuel est <a href='https://mieuxtrieranantes.wordpress.com/2019/12/15/ajouter-modifier-ou-supprimer-un-atelier-sur-la-carte-cartoccase-fr/' target=_new>ici</a>.
 		</p>
-		<p>Pour le calendrier : <br>
-			- ajouter l'évènement sur Open-Agenda <a href='http://www.coreparation44.fr/RecetteAjoutEvenementCoReparationDansCalendrier.pdf' target=_new>en suivant la recette</a>
+		<h3>Ils ont contibué en donnant leurs données :</h3>
+		<p>- Carte des <a href='https://rc-29.gogocarto.fr/annuaire#/carte/@48.07,-4.19,9z?cat=all' target=_new>Repair Café du Finistère</a>
 		</p>
 
 		<a class="anchor" id="contact"></a>
@@ -126,7 +124,6 @@
 
 	</body>
 
-	<script src="lib/jquery-3.3.1.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		function menuToggle() {
 		    document.getElementById("menu").classList.toggle("show");
@@ -171,13 +168,23 @@
 		    document.getElementById('map').style.top = "10px";
 			  document.getElementById('menuToggle').style.display = 'none';
 			  document.getElementById('content').style.display = 'none';
-			  document.getElementById('header_embedded').style.display = 'block'; //Will show
+			  document.getElementById('header_embedded').style.display = 'flex'; //Will show
 		  } else {
-  			document.getElementById('menuToggle').style.display = 'block'; //Will show
-			  document.getElementById('content').style.display = 'block'; //Will show
+  			document.getElementById('menuToggle').style.display = 'flex'; //Will show
+			  document.getElementById('content').style.display = 'flex'; //Will show
 			  document.getElementById('header_embedded').style.display = 'none';
 		  }
       </script>
+      <!-- flèche scroll down map -->
+      <script type="text/javascript">
+      	$(function() {
+		  $('a[href*=\\#]').on('click', function(e) {
+		    e.preventDefault();
+		    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+		  });
+		});
+      </script>
+
         <!-- End Piwik Code -->
-	<script src="vracanantes.js" type="text/javascript"></script>
+	<script src="coreparation.js" type="text/javascript"></script>
 </html>
