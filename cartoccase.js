@@ -107,6 +107,9 @@ function addListOfShops() {
       repairTags['mapillary'],
       repairTags['brand'],
       repairTags['operator'],
+		  repairTags['clothes'],
+			repairTags['books'],
+			repairTags['shop'],
       typeArray
     );
 
@@ -139,21 +142,25 @@ function getPopupContent(
   mapillary,
   brand,
   operator,
+	clothes,
+	books,
+	shop,
   typeArray
 ) {
   // Check that name exists
   if (!name) {
     return null;
   }
-  var popup = '<b>' + name + '</b>';
+	// Set the shop type
+	var shopTitle = getShopTitle(clothes, books, shop);
+  var popup = '<b>' + name + '</b>' + shopTitle;
   popup += "<br/>";
   if (charity === "yes") {
     popup += '<i>Tenu par une association</i><br />';
   }
   popup += getHtmlFormattedImage(image, mapillary);
 
-  // Set the shop type
-  // var shopTitle = getShopTitle(typeArray, charity, neighbourhood);
+
   if (description) {
     popup += '<i>' + description + '</i><br />';
   }

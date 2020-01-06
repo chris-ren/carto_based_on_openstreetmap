@@ -7,7 +7,7 @@
 	<title> Magasins de produits d'occasion (et boîtes à don)</title>
 	<meta name=”description” content="Carte des Magasins de produits d'occasion (et boîtes à don)." />
 	<meta name=”keywords” content="nantes, vrac, emballages, zéro déchets, magasin vrac, magasin zéro déchet" />
-	<meta property="og:title" content="Réparation" />
+	<meta property="og:title" content="CartOccase.fr" />
 	<meta property="og:site_name" content="Magasins de produits d'occasion (et boîtes à don)" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://www.cartoccase.fr" />
@@ -75,15 +75,12 @@
 				</div>
 
 				<img src="logo-header.png" class="logoCoreparation"><a href="#jumptomap">
-					<h1 style='font-size:12px'> Magasins de produits </br> d'occasion (et boîte à don)</h1>
+					<h1 style='font-size:12px'> Magasins de produits </br> d'occasion (et boîtes à don)</h1>
 				</a>
 
 				<ul id="menu" class="menu">
 					<a href="#jumptomap" onclick="closeMenu()">
 						<li>Carte</li>
-					</a>
-					<a href="#calendrier" onclick="closeMenu()">
-						<li>Calendrier</li>
 					</a>
 					<a href="#projet" onclick="closeMenu()">
 						<li>Projet</li>
@@ -115,34 +112,11 @@
 
 	<div id="content">
 
-		<a class="anchor" id="calendrier"></a>
-		<h2>Le calendrier</h2>
-		<!-- div>
-			Filtres actifs :
-			<span style='border-radius:4px; padding: 5px 10px; background-color:#4CAF50; color:white; text-align: center;text-decoration: none; display:inline-block; font-size:16px'>Tous types réparation</span>
-			<span style='border-radius:4px; padding: 5px 10px; background-color:#4CAF50; color:white; text-align: center;text-decoration: none; display:inline-block; font-size:16px'>4 mois</span>
-			<span id='filterCalendar44' style='border-radius:4px; padding: 5px 10px; background-color:#4CAF50; color:white; text-align: center;text-decoration: none; display:inline-block; font-size:16px'>Loire-Atlantique</span>
-			<span id='filterCalendar49' style='border-radius:4px; padding: 5px 10px; background-color:#4CAF50; color:white; text-align: center;text-decoration: none; display:inline-block; font-size:16px'>Maine-Et-Loire</span>
-			<span id='filterCalendar49' style='border-radius:4px; padding: 5px 10px; background-color:#4CAF50; color:white; text-align: center;text-decoration: none; display:inline-block; font-size:16px'>Sarthe</span>
-			<span id='filterCalendar49' style='border-radius:4px; padding: 5px 10px; background-color:#4CAF50; color:white; text-align: center;text-decoration: none; display:inline-block; font-size:16px'>Mayenne</span>
-			<span id='filterCalendar49' style='border-radius:4px; padding: 5px 10px; background-color:#4CAF50; color:white; text-align: center;text-decoration: none; display:inline-block; font-size:16px'>Vendée</span>
-		</div -->
-		<br />
-		<div id="textDiv" style="display:none"></div>
-
-		<div id="textDiv2"></div>
-
-		<!--<p>
-		<iframe style="width:100%;height:500px" frameborder="0" scrolling="yes" allowtransparency="allowtransparency" class="cibulFrame cbpgbdy" data-oabdy src="calendrier.html"></iframe>
-	</p>-->
-
 		<a class="anchor" id="projet"></a>
 		<h2>Le projet</h2>
 		<p>
-			Il existe de nombreux ateliers de réparation collaboratifs. Il arrive parfois que des particuliers se rendent à un atelier de réparation distant, car il ne connaissait pas l'existence d'un lieu plus proche.<br /><br />Les associations "Repair
-			Café du Vignoble nantais" et "Mieux trier à Nantes" ont réalisés en 2017 pour Ecopole une liste des ateliers de réparation collaboratifs de Loire-Atlantique. Cette liste est open-data (réutilisable gratuitement et librement). Elle a été étendue
-			ensuite pour la France entière.<br /><br />
-			<b>Cette carte est la vôtre : vous pouvez la modifier par vous-même car les données sont stoquées sur OpenStreetMap</b> (le guide est <a href='https://mieuxtrieranantes.wordpress.com/2019/12/15/ajouter-modifier-ou-supprimer-un-atelier-sur-la-carte-coreparation-fr/'
+			Ce site référence les lieux pour acheter d'occasion : friperies, magasins d'occasions, dépôts-vente, mais aussi locaux tenus par des associations. Il y a aussi les boîtes à livres et boîtes à dons.<br /><br />
+			<b>Cette carte est la vôtre : vous pouvez la modifier par vous-même car les données sont stoquées sur OpenStreetMap</b> (le guide est <a href='https://wiki.openstreetmap.org/wiki/FR:WikiProject_CircularEconomy'
 			  target=_new>ici</a>).<br /><br />
 			Merci.</p>
 		</p>
@@ -151,20 +125,16 @@
 		<p>
 			Ce site a plusieurs particularités :<br />
 			- la carte n'est pas stockée chez Google mais chez OpenStreetMap qui est une carte libre et qui n'appartient pas à un géant d'internet.<br />
-			- le calendrier n'est pas stocké chez Facebook mais dans l'agenda libre Open-Agenda.<br />
 			- afin de diminuer la consommation électrique des requêtes, on ne récupère pas en temps réel les données de l'agenda et de la carte, mais uniquement 1 fois par heure et à la demande.<br />
 			- les statistiques ne sont pas réalisées par "Google Analytics" mais la solution libre Matomo et hébergées sur ce site.<br />
-			- le code source de ce site est libre, et <a href='https://github.com/vivreanantes/vracanantes/tree/feature/AteliersReparationCollaboratifLoireAtlantique' target=_ne>disponible sur github</a>.
+			- le code source de ce site est libre, et <a href='https://github.com/chris-ren/carto_based_on_openstreetmap' target=_ne>disponible sur github</a>.
 		</p>
 
 		<a class="anchor" id="contribuer"></a>
 		<h2>Contribuer</h2>
 		<p>Pour ajouter, modifier ou supprimer des points sur la carte, <b>au choix</b> : <br>
-			- <i>je ne suis pas très fort en informatique</i> : remplir le <a href='https://framaforms.org/ateliers-de-reparation-collaboratifs-1539567458' target=_new>formulaire</a><br />
-			- <i>je suis moyen en informatique</i> : utiliser des formulaires pour saisir directement, via MapContrib. Le manuel est <a href='https://mieuxtrieranantes.wordpress.com/2019/12/16/avec-mapcontrib-ajouter-modifier-ou-supprimer-un-atelier-sur-la-carte-coreparation-fr/'
-			  target=_new>ici</a> .<br />
-			- <i>je suis bon en informatique</i> : inscrire directement dans OpenStreetMap :
-			le manuel est <a href='https://mieuxtrieranantes.wordpress.com/2019/12/15/ajouter-modifier-ou-supprimer-un-atelier-sur-la-carte-coreparation-fr/' target=_new>ici</a>.
+			- <i>je ne suis pas très fort en informatique</i> : remplir le <a href="https://framaforms.org/magasins-doccasion-et-boites-a-don-1578315163" target=_new>formulaire</a>.<br />
+			- <i>je suis bon en informatique</i> : inscrire directement dans OpenStreetMap : le manuel est <a href='https://wiki.openstreetmap.org/wiki/FR:WikiProject_CircularEconomy' target=_new>ici</a>.
 		</p>
 
 		<a class="anchor" id="contact"></a>
