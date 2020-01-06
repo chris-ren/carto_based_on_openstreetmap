@@ -93,13 +93,20 @@ function addListOfShops() {
       repairTags['name'],
       repairTags['charity'],
       repairTags['contact:housenumber'],
+      repairTags['housenumber'],
       repairTags['contact:street'],
+      repairTags['street'],
       repairTags['contact:postcode'],
+      repairTags['postcode'],
       repairTags['contact:city'],
+      repairTags['city'],
       repairTags['opening_hours'],
       repairTags['contact:email'],
+      repairTags['email'],
       repairTags['contact:facebook'],
+      repairTags['facebook'],
       repairTags['contact:phone'],
+      repairTags['phone'],
       repairTags['contact:website'],
       repairTags['website'],
       repairTags['description'],
@@ -128,13 +135,20 @@ function getPopupContent(
   name,
   charity,
   housenumber,
+  housenumber2,
   street,
+  street2,
   postcode,
+  postcode2,
   city,
+  city2,
   opening_hours,
   email,
+  email2,
   facebook,
+  facebook2,
   phone,
+  phone2,
   website,
   website2,
   description,
@@ -164,13 +178,19 @@ function getPopupContent(
   if (description) {
     popup += '<i>' + description + '</i><br />';
   }
-  popup += getHtmlFormattedAddress(housenumber, street, postcode, city);
+  popup += getHtmlFormattedAddress(housenumber, housenumber2, street, street2, postcode,  postcode2, city, city2);
   popup += getHtmlFormattedHours(opening_hours);
   if (phone) {
     popup += "Tél : " + phone + '<br />';
   }
+  if (phone2) {
+    popup += "Tél : " + phone2 + '<br />';
+  }
   if (facebook) {
     popup += getHtmlFormattedWebsite("Facebook", facebook);
+  }
+  if (facebook2) {
+    popup += getHtmlFormattedWebsite("Facebook", facebook2);
   }
   popup += getHtmlFormattedWebsite("Site web", website);
   popup += getHtmlFormattedWebsite("Site web", website2);

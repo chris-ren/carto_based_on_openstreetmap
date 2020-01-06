@@ -7,7 +7,7 @@
 	<title> Magasins de produits d'occasion (et boîtes à don)</title>
 	<meta name=”description” content="Carte des Magasins de produits d'occasion (et boîtes à don)." />
 	<meta name=”keywords” content="nantes, vrac, emballages, zéro déchets, magasin vrac, magasin zéro déchet" />
-	<meta property="og:title" content="CartOccase.fr" />
+	<meta property="og:title" content="Carte achats occasion (ou dons)" />
 	<meta property="og:site_name" content="Magasins de produits d'occasion (et boîtes à don)" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://www.cartoccase.fr" />
@@ -91,6 +91,9 @@
 					<a href="#contribuer" onclick="closeMenu()">
 						<li>Contribuer</li>
 					</a>
+					<a href="#api" onclick="closeMenu()">
+						<li>API</li>
+					</a>
 					<a href="#contact" onclick="closeMenu()">
 						<li>Contact</li>
 					</a>
@@ -106,7 +109,7 @@
 	<a class="anchor" id="jumptomap"></a>
 	<div class="test2">
 		<div id="map" style="width: 100%;  height: 90%; z-index: 1;">
-			<a href="#calendrier" class="arrowScroll"><img src="img_src/arrow-icon.png" class="arrowScroll_Icon"></a>
+			<a href="#projet" class="arrowScroll"><img src="img_src/arrow-icon.png" class="arrowScroll_Icon"></a>
 		</div>
 	</div>
 
@@ -116,9 +119,10 @@
 		<h2>Le projet</h2>
 		<p>
 			Ce site référence les lieux pour acheter d'occasion : friperies, magasins d'occasions, dépôts-vente, mais aussi locaux tenus par des associations. Il y a aussi les boîtes à livres et boîtes à dons.<br /><br />
-			<b>Cette carte est la vôtre : vous pouvez la modifier par vous-même car les données sont stoquées sur OpenStreetMap</b> (le guide est <a href='https://wiki.openstreetmap.org/wiki/FR:WikiProject_CircularEconomy'
-			  target=_new>ici</a>).<br /><br />
-			Merci.</p>
+			<b>Cette carte est la vôtre : vous pouvez la modifier par vous-même car les données sont stoquées sur OpenStreetMap</b><br/><br />
+			Ce projet fait parti d'une <a href='https://wiki.openstreetmap.org/wiki/FR:WikiProject_CircularEconomy' target=_new>cartographie de l'économie circulaire</a> avec les sites <a href='http://coreparation.fr/' target=_new>http://coreparation.fr/</a> (les ateliers de co-réparation, dont les repairs cafés) et <a href='https://cartovrac.fr/' target=_new>https://cartovrac.fr/</a> (les magasins sans emballages).<br /><br />
+			Merci.<br/><br/>
+		  L'équipe de <i>Mieux trier à Nantes</i></p>
 		</p>
 		<a class="anchor" id="vert"></a>
 		<h2>Un site vert et libre</h2>
@@ -134,8 +138,15 @@
 		<h2>Contribuer</h2>
 		<p>Pour ajouter, modifier ou supprimer des points sur la carte, <b>au choix</b> : <br>
 			- <i>je ne suis pas très fort en informatique</i> : remplir le <a href="https://framaforms.org/magasins-doccasion-et-boites-a-don-1578315163" target=_new>formulaire</a>.<br />
-			- <i>je suis bon en informatique</i> : inscrire directement dans OpenStreetMap : le manuel est <a href='https://wiki.openstreetmap.org/wiki/FR:WikiProject_CircularEconomy' target=_new>ici</a>.
-		</p>
+			- <i>je suis bon en informatique</i> : inscrire directement dans OpenStreetMap : le manuel est <a href='https://wiki.openstreetmap.org/wiki/FR:WikiProject_CircularEconomy' target=_new>ici</a>. Les tags OpenStreetMap utilisés : 'name', 'charity', 'contact:housenumber', 'housenumber', 'contact:street', 'street', 'contact:postcode', 'postcode', 'contact:city', 'city', 'opening_hours', 'collection_times', 'contact:email', 'email', 'contact:facebook', 'facebook', 'contact:phone', 'phone', 'contact:website', 'website', 'description', 'image', 'mapillary', 'brand', 'operator', 'clothes', 'books', 'shop'.
+		 </p>
+
+				<a class="anchor" id="api"></a>
+				<h2>API</h2>
+					<p>
+				- La requête pour récupérer les données <a href='http://overpass-api.de/api/interpreter?data=[out:json];(area[%22ISO3166-1%22=%22FR%22];)-%3E.searchArea;(node[%22amenity%22=%22givebox%22];node[%22second_hand%22=%22only%22](area.searchArea););out;' target=_new>requête overpass</a>.<br />
+				- Les données actuellement utilisées : <a href="http://www.cartoccase.fr/cache_data.json" target=_new>cache_data.json</a><br/>
+					</p>
 
 		<a class="anchor" id="contact"></a>
 		<h2>Contact</h2>
