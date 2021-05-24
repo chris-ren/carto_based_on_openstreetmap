@@ -21,13 +21,10 @@ var map = L.map('map', {
 
 // Add branding and license links
 L.tileLayer(
-  'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; ' +
-      '<a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-      '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-      'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+  'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
     maxZoom: maxZoom,
-    id: 'mapbox.streets',
+    id: 'mapbox/streets-v11',
     accessToken: 'pk.eyJ1IjoidnJhY2FuYW50ZXMiLCJhIjoiY2psMmtneDllMWowNDN3cDR6NGtwbmk5MyJ9.BLI4o0qCMZBck7mdYcUhuA'
   }
 ).addTo(map);
@@ -93,13 +90,13 @@ function addListOfShops() {
       repairTags['name'],
       repairTags['charity'],
       repairTags['contact:housenumber'],
-      repairTags['housenumber'],
+      repairTags['addr:housenumber'],
       repairTags['contact:street'],
-      repairTags['street'],
+      repairTags['addr:street'],
       repairTags['contact:postcode'],
-      repairTags['postcode'],
+      repairTags['addr:postcode'],
       repairTags['contact:city'],
-      repairTags['city'],
+      repairTags['addr:city'],
       repairTags['opening_hours'],
       repairTags['contact:email'],
       repairTags['email'],
